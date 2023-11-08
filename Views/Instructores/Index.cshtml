@@ -1,0 +1,22 @@
+﻿
+<h1>Courses</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>        
+    </tr>
+    @foreach (var instructore in Model)
+    {
+        <tr>
+            <td>@instructore.Name</td>
+            <!--
+            <td> <a asp-controller="Instructore" asp-action="Details" asp-route-Id="@instructore.Id">Instructore Details</a></td>
+            <td> <a asp-controller="Instructore" asp-action="EditCourse" asp-route-Id="@instructore.Id">Edit</a></td>
+            <td> <a asp-controller="Instructore" asp-action="DeleteCourse" asp-route-Id="@instructore.Id">Delete</a></td>
+            -->
+        </tr>
+    }
+    <!--
+    <a href="/Instructore/AddInstructor" class="btn btn-success">New Course</a>
+    -->
+   
+</table>

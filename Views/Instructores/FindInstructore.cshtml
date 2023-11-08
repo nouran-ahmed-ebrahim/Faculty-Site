@@ -1,0 +1,36 @@
+﻿
+@{
+    SelectList Instructores = new SelectList(ViewBag.Instructores, "Id", "Name");
+}
+
+<h1>Instructores</h1>
+<div>
+    <select name="InstructoreId" id="InstructoreId" asp-items="Instructores" class="form-control" onchange="GetDetails()">
+        <option value="0">-- Select Instructore --</option>
+    </select>
+    <!--<span asp-validation-for="Id" class="text-danger"></span>-->
+
+</div>
+<br />
+
+<div id="InstructoreDetail">
+</div>
+
+<script>
+    function GetDetails(){
+        var InstructoreId = document.getElementById("InstructoreId").value;
+        console.log(InstructoreId)
+        $.ajax(
+            {
+                url: "/Instructores/InstructoreCard/" ,
+                data: { "id": InstructoreId }
+            ,
+            success: function (result) {
+                console.log(result);
+                document.getElementById("InstructoreDetail").innerHTML = result;
+
+                }
+            }
+            );
+    }
+</script>

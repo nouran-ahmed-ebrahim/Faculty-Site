@@ -1,0 +1,12 @@
+﻿@model Instructore
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="/Images/@Model.Image" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">@Model.Name</h4>
+        <p class="card-text">Address: @Model.Address</p>
+        <p class="card-text">Salary: @Model.Salary</p>
+        <p class="card-text">Department: @Model.Department.Name</p>
+        <p class="card-text">Course: @Model.Course.Name</p>
+    </div>
+</div>

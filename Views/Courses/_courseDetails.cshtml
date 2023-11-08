@@ -1,0 +1,24 @@
+﻿@{
+    var CourseInstructors = "";
+    if (Model.Instructores.Count == 0)
+    {
+        CourseInstructors = "No Instructores";
+    }
+    else
+    {
+        foreach (var Instructore in Model.Instructores)
+        {
+            CourseInstructors += Instructore.Name + ",  ";
+        }
+    }
+
+}
+
+<h1>Details</h1>
+<ul>
+    <li><p class="fw-bold d-inline">Course Name: </p>@Model.Name</li>
+    <li><p class="fw-bold d-inline">Course Degree: </p>@Model.Degree</li>
+    <li><p class="fw-bold d-inline">Course MinDegree: </p>@Model.MinDegree</li>
+    <li><p class="fw-bold d-inline">Department: </p>@Model.Department.Name</li>
+    <li><p class="fw-bold d-inline">Course Instructors: </p>@CourseInstructors</li>
+</ul>

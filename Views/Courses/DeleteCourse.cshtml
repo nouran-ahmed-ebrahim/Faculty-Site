@@ -1,0 +1,4 @@
+﻿@model Course
+<partial name="_courseDetails" model="Model" />
+<a asp-controller="Courses" asp-action="Index" class="d-inline">Back To List</a>
+<a asp-controller="Courses" asp-action="ConfirmCourse" asp-route-Id="@Model">Delete</a>
