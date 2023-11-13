@@ -7,6 +7,11 @@ namespace Asp.net.Controllers
     public class InstructoresController : Controller
     {  
         ApplictaionDbContext DbContext = new ApplictaionDbContext();
+
+        public InstructoresController()
+        {
+            // depenecy Injection
+        }
         public IActionResult Index()
         {
             DbSet<Instructore> Instructores = DbContext.Instructores;

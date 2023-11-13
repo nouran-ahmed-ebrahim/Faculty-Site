@@ -4,6 +4,14 @@ namespace Asp.net.Models
 {
     public class ApplictaionDbContext : DbContext
     {
+	public ApplictaionDbContext ():base()
+        {
+
+        }
+        public ApplictaionDbContext (DbContextOptions options):base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
         optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-9P4J4BR;Initial Catalog=Faculty;Integrated Security=True; TrustServerCertificate=True;");
 
